@@ -36,6 +36,7 @@ h1,h2,h3,h4,h5,h6{
 	width: 230px;
 	height: 100%;
     background: #353535;
+    opacity: 200%;
     transition: left .3s;
 }
 .sidebar header{
@@ -162,13 +163,14 @@ header hr{
         width: 100%;
     }
     .sidebar ul a{
-        line-height: 3.5rem;
+        line-height: 3rem;
     }
     .hide{
         left: 0;
     }
     .nav-item {
         max-width: 100%;
+        width: 25%;
     }
     .content{
         margin: 0;
