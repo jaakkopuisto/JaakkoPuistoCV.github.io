@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    
 }
 html{
     scroll-behavior: smooth;
@@ -12,6 +13,25 @@ ul{
 h1,h2,h3,h4,h5,h6{
     font-weight: 400;
 }
+
+
+.background-imageContainer{
+    position: fixed;
+    background-repeat: no-repeat;
+    opacity: 1;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    z-index: -1;
+    vertical-align: middle;
+    left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+.background-imageContainer img{
+    display:block;
+  left: 50%;
+}
+
 .navbar{
     font-family: 'Verdana', Georgia, monospace;
     background: #353535;
@@ -35,8 +55,8 @@ h1,h2,h3,h4,h5,h6{
 	left: 0;
 	width: 230px;
 	height: 100%;
-    background: #353535;
-    opacity: 200%;
+    background: #222222;
+    opacity: 95%;
     transition: left .3s;
 }
 .sidebar header{
@@ -59,7 +79,7 @@ h1,h2,h3,h4,h5,h6{
 	display: block;
 	height: 100%;
 	width: 100%;
-	line-height: 6rem;
+	line-height: 5rem;
 	font-size: 1.2rem;
 	color: white;
 	padding-left: 1.2rem;
@@ -67,32 +87,76 @@ h1,h2,h3,h4,h5,h6{
 	border-top: 1px solid rgba(255,255,255,.1);
     border-bottom: 1px solid black;
     transition: .3s;
+    align-content: center;
+    
 }
 .sidebar .links li:hover a{
     padding-left: 30px;
 }
+
+.link-slot{
+    height: 5rem;
+    
+}
 .content{
     font-family: 'Segoe UI', Courier, monospace;
     font-size: 1.3rem;
-    margin-left: 250px;
-    padding: 300px 300px 0 200px;
+    
+    padding: 24vh 15% 400px 15%;
+    /* background-color: rgba(1, 1, 1, 1); */
+    
+
 }
 .content a{
     color:white;
 }
+.rest-of-content a {
+    color: white;
+}
+.full-container{
+    padding-left: 230px;
+}
+.skills{
+   
+    margin-top: -40px;
+}
+.rest-of-content{
+    background-color: rgba(255, 255, 255, .95);
+    font-family: 'Segoe UI', Courier, monospace;
+    font-size: 1.3rem;
+    padding: 0 10% 0 10%;
+    
+}
 .content li{
     margin-right: 50px;
     margin-bottom: 60px;
-    background: #353535;
+    background: #222222;
     border-radius: 10px;
-    box-shadow: 1px 3px #acacac;
+    box-shadow: -1px -1px #acacac;
+    width: auto;
+}
+.rest-of-content li{
+    margin-right: 50px;
+    margin-bottom: 60px;
+    background: #222222;
+    border-radius: 10px;
+    box-shadow: -1px -1px #acacac;
     width: auto;
 }
 .Profile{
-    padding-bottom: 80px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: seashell;
+    background-color: rgba(0,0,0, 0.65);
+    opacity: 100%;
+    color: white;
+    text-shadow: 2px 2px #414141;
+    
+    
 }
 .nav-item{
     max-width: 260px;
+    align-content: center;
     
 }
 .nav-item a{
@@ -102,7 +166,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     
 }
-.links .nav-item a:hover{
+.links-list .nav-item a:hover{
     transform: scale(1.05);
     /* font-size: 110%; */
 }
@@ -125,6 +189,12 @@ header hr{
 .gamedev i{
     color: #ec7262;
 }
+.links-list{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+
+}
 .burger{
     background: #353535;
     color: white;
@@ -146,14 +216,16 @@ header hr{
 .logo{
     width: 150px;
 }
-@media screen and (max-width: 1370px){
-    .content{
-        padding: 300px 100px 0 50px;
-    }
-}
+
 @media screen and (max-width: 910px){
+    .full-container{
+        padding-left: 0;
+    }
     .content{
-        padding: 300px 50px 0 50px;
+        padding: 300px 50px 400px 50px;
+    }
+    .rest-of-content{
+        margin-left: 0;
     }
     .burger{
         right: 0%;
@@ -167,6 +239,9 @@ header hr{
     }
     .hide{
         left: 0;
+    }
+    .row{
+        margin-right: 0;
     }
     .nav-item {
         max-width: 100%;
