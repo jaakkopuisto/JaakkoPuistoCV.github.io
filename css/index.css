@@ -3,6 +3,13 @@
     padding: 0;
     
 }
+body{
+    
+    background: url(/img/1.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 html{
     scroll-behavior: smooth;
     overflow-y: scroll;
@@ -15,24 +22,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-.background-imageContainer{
-    position: fixed;
-    background-repeat: no-repeat;
-    opacity: 1;
-    z-index: -1;
-    vertical-align: middle;
-    left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-}
-.background-imageContainer img{
-    display:block;
-  left: 50%;
-}
-
 .navbar{
     font-family: 'Verdana', Georgia, monospace;
     background: #353535;
+    z-index: 1;
 }
 .navbar a{
     color: white;
@@ -119,7 +112,7 @@ transform: translate(-50%, -50%);
     margin-top: -40px;
 }
 .rest-of-content{
-    background-color: rgba(255, 255, 255, .95);
+    background-color: rgba(255, 255, 255, .88);
     font-family: 'Segoe UI', Courier, monospace;
     font-size: 1.3rem;
     padding: 0 10% 0 10%;
